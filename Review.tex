@@ -1,0 +1,106 @@
+\documentclass[12pt, letterpaper, oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\onehalfspacing
+%\linespread{1.3}
+ 
+\title{\textbf{Human Factors in Unmanned Aerial Systems (UAS)}}
+\author{Dritan Hasani\\
+		Department of Computer Science and Engineering,\\
+		University of Nevada, Reno\\
+		\texttt{dhasani@nevada.unr.edu}}
+\date{}
+ 
+\begin{document}
+ 
+\begin{titlepage}
+\maketitle
+\thispagestyle{empty}
+\end{titlepage}
+ 
+\section{INTRODUCTION}
+Even though it might seem like the unmanned aerial vehicles (UAVs) are only a recent technology, the truth is that research in the field of unmanned aerial systems has started as early as the beginning of the 20th century. Back in 1918 Charles Kettering built a prototype UAV for the needs of the US Army \cite{10}. At about the same time United Kingdom built several UAVs for military use, and June 1921 brought the first successful demonstration of the radio-controlled assault drone \cite{16}. The interest for developing unmanned aerial systems remained with the military in the following decades and several drones have been designed and deployed in military missions. The United States gave UAVs an increasing role in surveillance and reconnaissance  missions during the Vietnam War in the 60's and 70's; Israel used drones as a “bait” during the war against Syria in 80's, and so on. The successful use of drones in these military missions lead to a situation where many countries and governments started investing in drone development programs, hence nowadays unmanned aerial vehicles hold an important and permanent position in the military arsenal of the US and other countries across Europe, Middle East, and Asia.
+  
+The UAVs though have many potential applications in a more peaceful usage, therefore in the recent years the research community became highly  interested in exploring the possibilities of using UAVs for civilian applications such as fire fighting, search and rescue, surveillance, construction and building inspection, mapping, agriculture, and many more. As a result a new class of small-sized (multi-rotor) UAVs has emerged but there are numerous challenges that need to be addressed before their full potential can be utilized in the daily civilian applications. Williams (2004) suggests that the rate of accidents for UAVs is several times higher than for manned aircrafts \cite{19}, therefore because of safety concerns US has in place a set of FAA regulations that make it illegal to fly UAVs into the regular airspace or to conduct  flights over densely populated areas. This fact imposes serious difficulties for the further research and development in the field of civilian UAV applications, therefore it is highly important for the regulators to move forward quickly in developing the necessary rules and regulations under which the UAVs will be finally allowed into the civilian airspace. In addition, there is also a number of technical challenges (related to navigation, sensing, communication, autonomy, etc) that need to be addressed before we see a wide expansion of UAV usage in daily applications.
+ 
+Nevertheless, these technical and regulatory issues are beyond the scope of our work, therefore in the following sections we will focus on the issues related to the human factors that need to be considered in the design and deployment of unmanned aerial systems in disaster mitigation operations. UAVs are promising for disaster mitigation tasks, yet there are numerous challenges that need to be addressed before their full potential can be utilized to assist first responders in their duties. Previous work has addressed the issue of achieving multi-robot control through well-designed interfaces that take into account the cognitive and perceptual strengths and limitations of the human operators \cite{11, 25}. Others have focused on studying the user requirements and their implications for the interface design, showing that interfaces are often overloaded with unnecessary information causing most of the provided data to be neglected by the users \cite{7, 22}. The UAV literature generally discusses the human factors in terms of situational awareness (SA) and operator cognitive load, therefore when discussing the human factors associated with the design of interfaces for multiple UAV control our main focus will be on the human - UAV interaction in terms of cognitive load and situational awareness (SA). We will try to answer the question if the human factors have been adequately addressed in the current UAV development, and subsequently identify the best methods to establish the appropriate level of autonomy and to design UAV interfaces that optimize these two factors, i.e. maximize the performance while simultaneously reducing the workload of the human operator.   
+
+\section{AUTONOMY}
+In the initial phases of UAV development all unmanned aircrafts were teleoperated (remotely controlled) by a human operator, but with the new technological advancements we are starting to see more and more UAVs that are capable of navigating and accomplishing tasks in a fully autonomous fashion. Autonomous navigation and control has been the focus of  many researchers during the past decade. Engel \emph{et al.} focused their work in developing a system able to navigate autonomously through previously unknown environment using a monocular camera as its main sensor \cite{13, 14, 15}. Autonomous navigation was also the subject addressed by the research conducted by Saska \emph{et al.} \cite{27}, as well as Achtelik \emph{et al.} who focused on the tracking and control of UAVs using the readings from a stereo camera system and inertial sensors \cite{21}. Nevertheless, autonomy by itself is not enough to ensure successful deployment of UAVs. It is well known that automated systems are governed by a formal syntax that limits their flexibility to address certain situations, hence it is necessary to always have a human operator ready to take over and handle the situation when automation reaches its limits. Involving the human raises numerous interaction issues that need to be addressed in order to achieve successful integration of the human-robot team. One of these issues is how to establish the appropriate balance between the automation and human control in such a system? \cite{17} Automation has clear advantages in terms of, for instance, precision and overload, but in the other hand previous research has shown that the emergency personnel has no trust in fully autonomous systems, therefore they prefer teleoperated, semi-autonomous, rather than autonomous ones \cite{7}. Riley (1994) showed that trust is the main factor that determines if an operator will chose to use an optional automation or refuse to accept its usefulness altogether. Research has shown that both extremes of trust can be potentially dangerous for the success of the mission. Insufficient trust can lead to situations when the operator refuses to make use of automation \cite{30}, while in the other hand over-trust may lead the operator to rely on automation even in situations when better performance would be achieved if the human took control over the system \cite{4}. 
+
+Automation also influences the level of workload on human operators. While intuitively we might think that higher automation by default means less overload, this is not always the case. Automation can often have the effect of merely changing the nature of workload (reduce manual load while increasing the cognitive load), or shifting the workload in time (support the pilot at times of low workload but fail to do so when needed most). The research has shown that increased automation might in occasions have such negative effect, thus the UAV system should be designed not only to avoid overload, but under-load as well \cite{9}. 
+
+Another implication of the automation is related to the human alertness or situational awareness during the disaster mitigation mission. Namely, an early work by Bainbridge (1987) \cite{20} has proven the weakness of humans to maintain their attention during the periods of low task demand. This is another reason why the possible under-load should be taken into account because it may result with reduced situational awareness, hence failure of human operator to observe important (even critical) moments during an disaster mitigation mission. 
+
+\section{INTERFACE DESIGN}
+A lot of research has been conducted to investigate different interface designs that provide for an easy navigation of UAVs in disaster mitigation scenarios. The proposed interfaces range from the ones that support graphical interaction, to those that utilize voice-based commands, motion tracking, and even ones that resemble the traditional aircraft cockpits \cite{8, 23, 24, 25}. There is no single type of interface that is best suited for all situations, but is is our belief that for a disaster mitigation mission a point-and-click graphical user interface (GUI) is the form of interaction that humans are mostly used to, therefore an interface that is based on this type of interaction facilitates an intuitive and easy operation of the UAV, which is the precondition for a better situational awareness and lowered cognitive load of the human operator \cite{32}. 
+
+Baker \emph{et al.} (2004) have shown the importance of integrating visual information from incoming video with other robot sensor information \cite{22}. However though, there is still unanswered questions related to the two possible ways of presenting the visual information, egocentric vs exocentric. Intuitively one is lead to believe that an operator interface should mirror as closely as possible the view of a pilot on-board an aircraft, but contrary to that intuition Wang (2004) showed that egocentric views might not always be preferable \cite{31}. The two approaches have their advantages and drawbacks, leading trade-off decisions related to the performance between the local and global awareness. One approach is to give the operator the ability to switch between the two views as needed, but in that case we need to take into consideration the extra workload that results from context-switching or mentally integrating the two views. 
+
+Another human factor to be considered is related to the question of what sensory input should be used to communicate important information to the operator, visual, auditory, or a combination of both? Wickens (2002) suggests that cross-modal approach (information divided between one visual and one auditory channel) is better than intra-modal (e.g. two visual channels) \cite{3}. Further work needs to be done in order to determine precisely what type of information is best presented visually and what through audio signals, and how to integrate the two sensory inputs to achieve an improved situational awareness while reducing the operator workload. 
+
+The study by Baker \emph{et al.} revealed that during a disaster mitigation mission most of the users, except for those highly experienced, focused solely on the video-stream window, while neglecting the other information on the interface screen. In the other hand, incorporating all the necessary information around the video-window may overload the display and thereof increase the overload on the operator. To overcome this issue of increased monitoring requirements it is desirable to “hide” certain information from the user and utilize “alarm-system” to notify the operator as needed about the critical events that need attention. This leads to another question related to the type of alerts to be used for this purpose, visual (pop-up windows) or audio signals? Audio alerts introduce less overload on the operator, but in the other hand they provide less situational awareness as the operator needs to distinguish what a given signal is telling them. Finding the trade-off between these two factors is an interesting topic that needs to be further investigated through experimentation. 
+
+In the previous section we discussed the impact that the automation has on the operator trust for the system. The research has shown that not only automation but also the content and format of information displayed in the interface has a potentially large effect on the trust \cite{1, 2}. The information that is well organized, provides enough concrete details, is consistent, etc, tends to increase the level of trust that the operator has for the system.  
+
+Endsley (2000) has suggested that goals are crucial in the development of SA. In a goal-driven process, the operator searches for information related to the goal and builds goal-driven mental models to filter and interpret the information \cite{26}. Many other researchers claim that humans built mental models that shape how they filter, understand, and interpret the information they receive. Therefore, when designing an interface it is important to have a sound understanding of how first responders model the process of a disaster mitigation response, and to design the interface accordingly so it fits this mental model. 
+
+In a disaster scenario the emergency personnel on the ground will often have the need to task a robot to a specific location (e.g. to get additional information before the human responders decide to enter a potentially hazardous area). With a centralized control approach, whenever such a need becomes apparent the first responders have to contact the ground control station, explain their need for tasking a robot to the specific area, give coordinates of the area, and wait for the GCS operator to accomplish the requested action. This scenario introduces communication overload, delay in response times, and additional load on the GCS human operator, therefore, it is desirable to have the possibility for the emergency personnel to task the robots directly from the ground. Prior work has shown a positive response from first responders in regard to the portability of the interface \cite{25}. However, switching the UAV control between the operator at the ground station and emergency personnel on the ground may have significant negative impact on the situational awareness of the operator, which is another human factor implication that needs to be taken into account when designing the HRI interfaces for disaster mitigation. 
+
+\section{PERFORMANCE METRICS}
+Another important area that needs to be considered is related to the metrics used for validation of human-UAV interfaces. Researches have used different metrics to evaluate certain aspect of an interface. The experiments generally tend to validate the interfaces in terms of \emph{implicit performance measures} and \emph{subjective measures}.
+
+The first method method attempts to evaluate situational awareness through measurement of the operational performance, implying that better SA leads to better performance \cite{12}. Several researchers have taken the approach of measuring the system performance, hence situational awareness, in terms of time required for an operator to learn using the interface, time to complete a given mission, and minimization of \emph{critical incidents} during the operation \cite{18}. Visser \emph{et al.} proposed the concepts of \emph{mission model memory} and \emph{deviation detection} as objective measurements for interface usability. The goal of this approach is to asses if the participants can remember which tasks were executed, which agent was responsible for each tasks, and how the tasks were related, which would in turn serve as an indicator of their situational awareness \cite{6}. Olsen \& Goodrich used the concepts of \emph{neglect tolerance} and \emph{interaction effort} as measures to evaluate the quality of human-robot interface. Neglect tolerance is defined as a measure of how the robot's current effectiveness declines as a function of time since the user last paid attention to the robot \cite{5}.
+
+In the other hand subjective measures are SA measurement techniques that aim to evaluate people's self-assessment of the SA \cite{12}. In the past the SA has been measured using techniques as direct interviews with the human operators \cite{7}. The NASA-TLX is one of the subjective measures assessing operator's perceived workload in terms of mental demands, physical demands, temporal demands, own performance, effort, and frustration \cite{29}. 
+
+\section{CONCLUSIONS}
+Operator workload and situational awareness have been proven to be the key challenges to robot-assisted disaster mitigation \cite{18}. Both overload and SA depend on operator training, experience, noises, stress, distractions, etc, but they also depend largely on the design decisions related to human factors for UAS. In this review we have discussed the human factors (workload and SA) in terms of autonomy and interface design. We have tried to give a review of the current state in these areas and identify possible future research that would address important challenges with the purpose of improving the quality of human-UAV interaction in a disaster mitigation scenario. The potential research areas that we identified include, but are not limited to:
+
+\subsection{Automation}
+
+\begin{description}
+	\item[$\bullet$] 
+	What is the appropriate level of automation that ensures a balanced operator trust? 
+	\item[$\bullet$] 
+	What are the appropriate tasks to be automated, and to what level should they be automated in order to achieve a reduced operator workload?
+	\item[$\bullet$] 
+	What are the best ways to maintain the operators alertness (avoid loss of attention) throughout the different phases of UAV operation? 
+\end{description}
+
+\subsection{Interface Design}
+
+\begin{description}
+
+	\item[$\bullet$] 
+	What is the appropriate trade-off between egocentric and exocentric views in the operator interface? 
+	\item[$\bullet$] 
+	What are the possible approaches to integrating these views without introducing additional cognitive load on the human operator?
+	\item[$\bullet$] 
+	What is the best form of presenting information to the operator (visual vs audio)? In what situations is one approach better than the other?
+	\item[$\bullet$] 
+	What are the most appropriate audio alerts to ensure that that the operator has clear understanding of what these signals mean? 
+	\item[$\bullet$] 
+	What is the appropriate interface content and format to ensure the appropriate level of operator trust? 
+	\item[$\bullet$] 
+	How to capture the mental-models that the first responders have about a disaster mitigation operation? How to use these models to build an interface using a goal-driven approach? How will the goals affect the SA? 
+	\item[$\bullet$] 
+	What is the effect of the team on SA? i.e. how will an operator's situational awareness be affected by the fact that first responders on the ground have the ability to control the UAVs directly? 
+	
+\end{description}
+
+\subsection{Performance Metrics}
+
+\begin{description}
+	\item[$\bullet$] 
+Murphy (2010) emphasized the importance of designing common metrics that would become the standard for evaluating HRI aspects in the robot-assisted SAR systems \cite{28}. However, until now no such a standard has been established and researchers use different metrics that are often contradictory, evaluate interfaces incorrectly, or evaluate one aspect of human-robot interaction correctly but fail to validate the system as a whole. I feel that there is space for research and testing in order to develop a set of metrics that best evaluate the human factors in UAV interfaces as an aggregate combination of effectiveness, workload, and situational awareness. 
+
+\end{description}
+
+\medskip
+\pagebreak
+
+\bibliographystyle{plain}
+\bibliography{review}
+
+\end{document}
